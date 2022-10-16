@@ -6,3 +6,216 @@ Green: #00B172
 White: #FFF
 
 */
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("../fonts/GothamLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("../fonts/GothamMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("../fonts/GothamMediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("../fonts/GothamBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpotifyFont";
+  src: url("../fonts/GothamBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  margin: 0;
+  font-family: SpotifyFont;
+}
+/*Navigation section*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  padding: 20px;
+}
+nav img {
+  max-width: 10%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin: 0 15px;
+}
+/*Resume section*/
+.resume {
+  display: flex;
+  height: 1000px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  background-color: #00b172;
+  text-align: center;
+  background-image: url("../images/landing.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+}
+.resume h1,
+p {
+  margin: 0;
+}
+.resume h1 {
+  font-size: 5rem;
+}
+.resume p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 5% 0;
+  line-height: 40px;
+}
+
+.whats-on {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.whats-on h3 {
+  font-size: 2em;
+  border-bottom: 5px solid #00b172;
+  padding-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin: 5% 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+}
+.title {
+  color: #00b172;
+  font-weight: bold;
+  margin: 7% 0;
+  font-size: 1.4rem;
+}
+.text {
+  color: #1a1a1a;
+  font-weight: lighter;
+}
+.example,
+.left-section,
+.right-section {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background-color: #00b172;
+  padding: 50px;
+}
+.example {
+  width: 90%;
+  margin: 0 auto;
+}
+.left-section {
+  flex-direction: column;
+  color: #fff;
+}
+.left-section h1 {
+  border-bottom: 3px solid #fff;
+  padding-bottom: 15px;
+  width: fit-content;
+}
+
+.right-section {
+  justify-content: center;
+  align-items: center;
+}
+.right-section img {
+  max-height: 400px;
+}
+.spotify-logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+}
+@media (max-width: 375px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 10px;
+  }
+  nav img {
+    max-width: 50%;
+    margin: 15px auto;
+  }
+  nav ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 0;
+  }
+  .resume {
+    height: 250px;
+  }
+  .resume h1 {
+    font-size: 2rem;
+  }
+  .resume p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .banner {
+    top: 30%;
+    left: 5%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .example {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+    position: initial;
+  }
+}
